@@ -1,34 +1,41 @@
 # Mi_documentacion_RodriguezOscar
-# AprendizajeMarkdown
+
+# 1.MARKDOWN
+
+# Tipos de tamaño de encabezado
 ## Segundo nivel encabezado
 ### Tercer nivel encabezado
-#### Cuarto
-##### Quinto
-###### Sexto
+#### Cuarto nivel encabezado
+##### Quinto nivel encabezado
+###### Sexto nivel encabezado
 
-De esta manera se puede poner texto en *Cursiva* i _tambien_ o en **negrita** para __destacarlo__
+## Como poner un texto en cursiva 
 
-Las etiquetas de **_markdown_** y html pueden anidarse
+De esta manera se puede poner texto en *Cursiva* o de esta _tambien_ (utilizamos "_" o "*" al principio y al final del texto que queramos destacar)
+
+## Como poner un texto en negrita
+
+Se puede hacer de **esta** manera o __esta__. (utilizamos "**" o "__" al principio y al final del texto que queramos destacar)
+
+ - Las etiquetas de **_markdown_** y html pueden anidarse
 
 ### Como hacer una lista ordenada y desordenada
 
 1. Primer punto lista ordenada
-    1. Primer elemento de la sublista 1
-    2. Segundo elemento de la sublista 1
+    1. Primer elemento de la sublista odenada
+    2. Segundo elemento de la sublista ordenada
+
+## Como hacer una lista desordenada
+
 2. Segundo punto de la lista
     * Primer elemento sublista desordenada
-    * Segundo elemento sublista desordenada
-3. Tercer punto de la lista
+    - Segundo elemento sublista desordenada
+    + Tercer elemento sublista desordenada
 
-* Primer punto de lista desordenada
-- Segundo punto de lista desordenada
-+ Tercer punto de lista desordenada
 
-Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+## Como mostrar codigo en repositorio
 
-Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
-
-__Como mostrar codigo en repositorio__
+utilizamos ``` al principio y al final del codigo que queramos mostrar
 ``` html
 Codigo random
 <?xml version="1.0" encoding="utf-8"?>
@@ -46,17 +53,35 @@ Codigo random
   <StagingSettings>
 
 ```
-### Como poner un link
+## Como poner un link
+
+#### Estructura
+
+_[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")_
+
+#### Ejemplo
 
 [Pagina_web_jesuites_bellvitge](https://srv.net.fje.edu/lg/AccesNetInfantil/#/LOGINNET "Titulo opcional")
 
-### Como poner una imagen
+## Como poner una imagen
+
+1. Descargamos la imagen en nuestro repositorio
+2. Guardamos cambio en el repositorio
+3. Entramos al repositorio desde git hub y accedemos a la imagen, donde copiaremos la barra de direcciones del navegador
+4. Aplicamos la siguiente Estructura
+
+_![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")_
+
+#### Ejemplo
 
 ![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")
 
-### Como hacer tabla 
+## Como hacer una tabla 
 
 |Titulo 1 | Titulo 2 | Titulo 3 |
 |-----------|:-------------:|------------:|
 |SMX2 |Curso 2324|25|
 |ASIX1|Curso2425|32|
+
+
+
