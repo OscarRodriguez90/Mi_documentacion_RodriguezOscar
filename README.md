@@ -57,7 +57,7 @@ Codigo random
 
 #### Estructura
 
-__[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")__
+[Titulo_del_link]+(link_a_la_pagina_web "Titulo opcional")
 
 #### Ejemplo
 
@@ -70,7 +70,7 @@ __[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")__
 3. Entramos al repositorio desde git hub y accedemos a la imagen, donde copiaremos la barra de direcciones del navegador
 4. Aplicamos la siguiente Estructura
 
-__![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")__
+[Textoalternativo]+(https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")
 
 #### Ejemplo
 
@@ -82,6 +82,27 @@ __![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/bl
 |-----------|:-------------:|------------:|
 |SMX2 |Curso 2324|25|
 |ASIX1|Curso2425|32|
+
+# 2.Como sincronizar en github
+
+## Como clonar un repositorio
+
+1. Primero, creamos un repositorio desde github
+2. Copiamos la url del repositorio
+3. Abrimos el cmd en la carpeta donde queremos clonarlo
+4. Usamos el comando "git clone _url del repositorio_"
+
+## Comandos basicos para sincronizar cambios en github
+
+ - __git init__ Situarse en el repositorio desde la terminal
+ - __git branch__ Ver la rama en la que estas trabajando
+ - __git add .__ Agrega los cambios que deseas confirmar
+ - __git commit -m "nombre del comit"__ confirma los cambios y agrega un comentario orientativo
+ - __git push origin__ Envía tus cambios al repositorio remoto
+
+## 
+
+
 
 
 
