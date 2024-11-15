@@ -57,7 +57,7 @@ Codigo random
 
 #### Estructura
 
-_[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")_
+__[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")__
 
 #### Ejemplo
 
@@ -70,7 +70,7 @@ _[Titulo_del_link](link_a_la_pagina_web "Titulo opcional")_
 3. Entramos al repositorio desde git hub y accedemos a la imagen, donde copiaremos la barra de direcciones del navegador
 4. Aplicamos la siguiente Estructura
 
-_![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")_
+__![Textoalternativo](https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")__
 
 #### Ejemplo
 
