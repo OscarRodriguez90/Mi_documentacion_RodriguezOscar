@@ -192,27 +192,27 @@ Body: contenido que quieras mostrar, texto, imágenes, video, etc…
   - usamos ruta relativa con href
   - < a href= ruta/ruta
 
-- Encabezados (h1 - h6): para hacer encabezados
+- Encabezados (< h1> < h6>): para hacer encabezados
   - Elementos de bloque
 
 - Párrafos → p: para hacer parrados
   - elemento de bloque
 
-- Salto de linea: br
+- Salto de linea: < br>
 
 - Separación linea: hr → poner linea horizontal
 
 - Énfasis em → dar énfasis strong → dar más énfasis
 
-- Contenedor en linea → span
+- Contenedor en linea → < span>
 
 - Listas de definición: formado término y definición
-  - Definición lista "dl"
-  - Definición term "dt"
-  - Definition descripción "dd"
+  - Definición lista < dl>
+  - Definición term < dt>
+  - Definition descripción < dd>
 
 - Imagenes
-  - "img" → no tiene cierre
+  - < img> → no tiene cierre
   - src: saber donde esta la imagen ubicada. “media/logo”.
 
 Dos tipos de rutas
