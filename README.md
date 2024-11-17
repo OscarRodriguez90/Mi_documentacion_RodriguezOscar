@@ -115,8 +115,8 @@ HTML es el lenguaje más común para describir la estructura y presentación de 
 
 Partes:
 
-- Etiqueta apertura: <p>
-- Etiqueta de cierre: </p>
+- Etiqueta apertura: < p>
+- Etiqueta de cierre: < /p>
 - Contenido: lo que está dentro de las dos etiquetas
 - Elemento completo: la combinación de las 3 cosas
 
@@ -133,15 +133,15 @@ Elementos vacíos → no tienen etiqueta de cierre.
 
 ## Estructura básica de un fichero HTML
 
-Tiene que tener una declaración DOCTYPE, un elemento <html> y un <head> <body> dentro. Head es para metadatos, hojas de estilo y scripts, el body es el contenido principal.
+Tiene que tener una declaración DOCTYPE, un elemento < html> y un < head> < body> dentro. Head es para metadatos, hojas de estilo y scripts, el body es el contenido principal.
 
-<link> href=””
+< link> href=””
 
-- Sección <head>:
+- Sección < head >:
 - Juego de caracteres, metainformación 
 - Descripción de la pagina → aparecer en resultados de búsquedas
 - Palabras claves → keywords
-- Titulo de la pagina → <title></title> es el título de tu página en la barra de búsquedas
+- Titulo de la pagina → < title></ title> es el título de tu página en la barra de búsquedas
 - Icono de la página de favicon
 - Enlace a otros ficheros→ hojas de estilo
 - Codigo CSS → dar estilo
@@ -184,35 +184,35 @@ Body: contenido que quieras mostrar, texto, imágenes, video, etc…
 
 ## Etiquetas básicas de HTML
 
-- Enlaces (<a>): saltar de un documento a otro, href → donde ponermos el enlace
+- Enlaces (< a >): saltar de un documento a otro, href → donde ponermos el enlace
   - Enlaces a páginas externas
-  - <p><a href link title = > jesuites </a></p>
+  - < p>< a href link title = > jesuites </ a></ p>
 
 - Enlaces a páginas locales 
   - usamos ruta relativa con href
-  - <a href= ruta/ruta
+  - < a href= ruta/ruta
 
-- Encabezados (<h1> <h6>): para hacer encabezados
+- Encabezados (h1 - h6): para hacer encabezados
   - Elementos de bloque
 
-- Párrafos <p>: para hacer parrados
+- Párrafos → p: para hacer parrados
   - elemento de bloque
 
-- Salto de linea: <br>
+- Salto de linea: br
 
-- Separación linea: <hr> poner linea horizontal
+- Separación linea: hr → poner linea horizontal
 
-- Énfasis <em> → dar énfasis <strong> → dar más énfasis
+- Énfasis em → dar énfasis strong → dar más énfasis
 
-- Contenedor en linea → <span>
+- Contenedor en linea → span
 
 - Listas de definición: formado término y definición
-  - Definición lista <dl>
-  - Definición term <dt>
-  - Definition descripción <dd>
+  - Definición lista "dl"
+  - Definición term "dt"
+  - Definition descripción "dd"
 
 - Imagenes
-  - <img> → no tiene cierre
+  - "img" → no tiene cierre
   - src: saber donde esta la imagen ubicada. “media/logo”.
 
 Dos tipos de rutas
@@ -225,13 +225,13 @@ Dos tipos de rutas
 
 
 - Enlaces a etiquetas dentro del HTML:
-  - Puntos donde queremos ir → anclas. <h1 id=”seccion1”>... 
-  - Enlazar ancla: <a href= #seccion1> …
+  - Puntos donde queremos ir → anclas. < h1 id=”seccion1”>... 
+  - Enlazar ancla: < a href= #seccion1> …
 
 ## Elementos semánticos HTML 5
 
 - Consigue describir el contenido dándole un significado de forma correcta
-- Ejemplos: <header><footer><article><section><nav><figure> → proporcionan inf sobre tipo contenido
+- Ejemplos: < header>< footer>< article>< section>< nav>< figure> → proporcionan inf sobre tipo contenido
 
 ## Formularios
 
@@ -241,7 +241,7 @@ Dos tipos de rutas
 
 ## Etiquetas de formulario
 
-- Form → crear formularios para que usuario envíe datos o haga acción en web
+- < Form > → crear formularios para que usuario envíe datos o haga acción en web
   - Atributos:
   - Action: url donde se enviaran los datos
   - method: metodo de envio datos
@@ -250,9 +250,9 @@ Dos tipos de rutas
     - _self: la resp se carga en la misma ventana
     - _blank: resp en una nueva pestaña o ventana
 
-- <input> → crear tipos campos interactivos
+- < input> → crear tipos campos interactivos
   - type: tipo de entrada que se debe mostrar
-  - id: identificador único del campo, asociar <label> a campo entrada
+  - id: identificador único del campo, asociar < label > a campo entrada
   - name: nombre campo entrada, se utiliza para identificar dato
   - value: valor predeterminado del campo de entrado o valor enviado servidor si campo no interactivo
   - placeholder: texto que aparece cuando campo vacío
@@ -264,7 +264,7 @@ Dos tipos de rutas
 - input type = checkbox → casilla verificación (permitir selecciones múltiples)
 
 - button → crear botones interactivos en un formulario o web,
-  - diferencia input → el contenido de <button> puede incluir texto, imágenes o HTML adicional
+  - diferencia input → el contenido de < button > puede incluir texto, imágenes o HTML adicional
   - type: tipo de botón
   - submit: para enviar el formulario, por defecto
   - reset: restablece los campos a los valores iniciales. 
