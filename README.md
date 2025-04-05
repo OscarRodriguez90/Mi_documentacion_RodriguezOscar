@@ -204,7 +204,7 @@ Después de la creación, para poder trabajar localmente, tenemos que clonar el 
    git clone https://github.com/usuario/repositorio.git
    ```
  
-# HTML
+# 3.HTML
 
 ### Introduccion a HTML
 
@@ -327,7 +327,7 @@ En **HTML**, puedes organizar contenido en listas. Aquí tienes cómo hacerlo:
 
 ---
 
-### - Hipervínculos e imágenes
+### - Enlaces e imágenes
 Para enlazar páginas o recursos, se usa la etiqueta `<a>`:
 ```
 <a href="https://www.ejemplo.com">Visita Ejemplo</a>
@@ -338,9 +338,352 @@ Para insertar imágenes, se utiliza `<img>`:
 <img src="imagen.jpg" alt="Descripción de la imagen">
 ```
 
+# 4.CSS
+
+### ¿Qué es CSS?
+
+**CSS** (Cascading Style Sheets) es un lenguaje de diseño utilizado para controlar la apariencia y el formato de un documento HTML. Mientras que **HTML** define la estructura del contenido, **CSS** se encarga de estilizarlo, permitiendo personalizar colores, fuentes, tamaños, márgenes, posiciones y otros aspectos visuales de una página web.
+
+### ¿Para qué sirve CSS?
+
+CSS permite separar el contenido (HTML) de la presentación (estilo), lo que facilita el mantenimiento y la reutilización del código. Algunas de sus principales funciones son:
+
+- **Estilizar texto**: Cambiar colores, fuentes, tamaños y alineaciones.
+- **Diseñar layouts**: Crear estructuras de página con columnas, filas y secciones.
+- **Controlar el espacio**: Ajustar márgenes, rellenos y bordes.
+- **Adaptar el diseño**: Crear páginas responsivas que se ajusten a diferentes dispositivos y tamaños de pantalla.
+- **Animaciones**: Agregar transiciones y efectos visuales dinámicos.
+
+
+### Cómo incluir CSS en un proyecto
+
+Existen tres formas principales de aplicar CSS a un documento HTML:
+
+1. **CSS en línea**: Se aplica directamente en el atributo `style` de una etiqueta HTML.
+   ```html
+   <p style="color: blue; font-size: 16px;">Texto en azul</p>
+   ```
+
+2. **CSS interno**: Se incluye dentro de una etiqueta `<style>` en el `<head>` del documento HTML.
+   ```html
+   <head>
+       <style>
+           p {
+               color: blue;
+               font-size: 16px;
+           }
+       </style>
+   </head>
+   ```
+
+3. **CSS externo**: Se utiliza un archivo `.css` separado que se enlaza al documento HTML mediante la etiqueta `<link>`.
+   ```html
+   <head>
+       <link rel="stylesheet" href="styles.css">
+   </head>
+   ```
+
+
+### Selectores en CSS
+
+Los selectores son una parte fundamental de CSS, ya que permiten aplicar estilos a elementos específicos de un documento HTML. Algunos de los selectores más comunes son:
+
+- **Selector de etiqueta**: Aplica estilos a todas las etiquetas de un tipo específico.
+  ```css
+  p {
+      color: red;
+  }
+  ```
+
+- **Selector de clase**: Aplica estilos a elementos con una clase específica (se define con un punto `.`).
+  ```css
+  .mi-clase {
+      font-size: 18px;
+  }
+  ```
+
+- **Selector de ID**: Aplica estilos a un elemento con un ID único (se define con un `#`).
+  ```css
+  #mi-id {
+      background-color: yellow;
+  }
+  ```
+
+- **Selector universal**: Aplica estilos a todos los elementos.
+  ```css
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  ```
+
+---
+
+### Propiedades comunes en CSS
+
+CSS cuenta con una amplia variedad de propiedades para personalizar el diseño de una página. Algunas de las más utilizadas son:
+
+- **Color y fondo**:
+  ```css
+  color: red; /* Cambia el color del texto */
+  background-color: lightblue; /* Cambia el color de fondo */
+  ```
+
+- **Texto**:
+  ```css
+  font-size: 16px; /* Tamaño de la fuente */
+  font-family: Arial, sans-serif; /* Tipo de fuente */
+  text-align: center; /* Alinear el texto */
+  ```
+
+- **Espacio**:
+  ```css
+  margin: 10px; /* Espacio exterior */
+  padding: 15px; /* Espacio interior */
+  ```
+
+- **Bordes**:
+  ```css
+  border: 2px solid black; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+  ```
+
+### - Ejemplo práctico de CSS
+
+Archivo HTML:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titulo">Bienvenido a mi página</h1>
+    <p id="descripcion">Este es un ejemplo de CSS externo.</p>
+</body>
+</html>
+```
+
+Archivo CSS (`styles.css`):
+```css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    color: blue;
+    text-align: center;
+}
+
+#descripcion {
+    color: gray;
+    font-size: 18px;
+    text-align: justify;
+}
+```
+
+### Flexbox
+
+**Flexbox** (Flexible Box Layout) es un modelo de diseño en CSS que permite distribuir y alinear elementos dentro de un contenedor de manera eficiente, incluso cuando sus tamaños son dinámicos o desconocidos. Es ideal para crear layouts flexibles y responsive.
+
+#### Propiedades principales de Flexbox
+
+1. **Propiedades del contenedor flex**:
+   - `display: flex;`: Activa el modelo de Flexbox en un contenedor.
+   - `flex-direction`: Define la dirección de los elementos dentro del contenedor.
+     - Valores: `row` (por defecto), `row-reverse`, `column`, `column-reverse`.
+   - `justify-content`: Alinea los elementos horizontalmente.
+     - Valores: `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`.
+   - `align-items`: Alinea los elementos verticalmente.
+     - Valores: `stretch` (por defecto), `flex-start`, `flex-end`, `center`, `baseline`.
+   - `flex-wrap`: Permite que los elementos se ajusten a una nueva línea si no caben en una sola.
+     - Valores: `nowrap` (por defecto), `wrap`, `wrap-reverse`.
+
+2. **Propiedades de los elementos flex**:
+   - `flex`: Es una propiedad abreviada que combina `flex-grow`, `flex-shrink` y `flex-basis`.
+   - `align-self`: Permite alinear un elemento individual de manera diferente al resto.
+     - Valores: `auto`, `flex-start`, `flex-end`, `center`, `baseline`, `stretch`.
+   - `order`: Cambia el orden visual de los elementos (por defecto es `0`).
+
+#### Ejemplo básico de Flexbox
+
+HTML:
+```html
+<div class="flex-container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+```
+
+CSS:
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: #f0f0f0;
+}
+
+.item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+```
+
+Resultado: Los elementos estarán distribuidos horizontalmente con espacio alrededor y alineados verticalmente al centro del contenedor.
+
+---
+
+### Responsive Design
+
+El diseño responsivo permite que una página web se adapte a diferentes tamaños de pantalla y dispositivos, mejorando la experiencia del usuario. Es un enfoque esencial en el desarrollo web moderno.
+
+#### Herramientas clave para diseño responsivo
+
+1. **Media Queries**:
+   Las media queries permiten aplicar estilos específicos según el tamaño de la pantalla o el dispositivo.
+   ```css
+   @media (max-width: 768px) {
+       body {
+           font-size: 14px;
+           background-color: #f9f9f9;
+       }
+   }
+
+   @media (min-width: 769px) and (max-width: 1024px) {
+       body {
+           font-size: 16px;
+           background-color: #e0e0e0;
+       }
+   }
+   ```
+
+2. **Unidades relativas**:
+   Usar unidades como `%`, `em`, `rem`, `vw` (viewport width) y `vh` (viewport height) en lugar de valores fijos para que los elementos se ajusten dinámicamente.
+   ```css
+   .container {
+       width: 80%; /* Ancho relativo al contenedor padre */
+       padding: 2em; /* Espaciado relativo al tamaño de la fuente */
+   }
+   ```
+
+3. **Imágenes responsive**:
+   Las imágenes pueden ajustarse automáticamente al tamaño del contenedor utilizando `max-width`.
+   ```css
+   img {
+       max-width: 100%;
+       height: auto;
+   }
+   ```
+
+4. **Flexbox y Grid**:
+   Estas herramientas son fundamentales para crear layouts adaptables. Por ejemplo, con Flexbox:
+   ```css
+   .flex-container {
+       display: flex;
+       flex-wrap: wrap;
+   }
+   ```
+
+#### Ejemplo práctico de diseño responsive
+
+HTML:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">Encabezado</header>
+    <main class="main">
+        <section class="content">Contenido principal</section>
+        <aside class="sidebar">Barra lateral</aside>
+    </main>
+    <footer class="footer">Pie de página</footer>
+</body>
+</html>
+```
+
+CSS:
+```css
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 3;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .content, .sidebar {
+        flex: 1;
+    }
+}
+```
+
+Resultado: En pantallas grandes, el contenido principal y la barra lateral estarán en una disposición horizontal. En pantallas pequeñas, se reorganizarán en una disposición vertical.
+
+# 5.XML
+
+### - ¿Qué es XML?
+
+**XML** (eXtensible Markup Language) es un lenguaje de marcas diseñado para almacenar y transportar datos de manera estructurada y legible tanto para humanos como para máquinas. A diferencia de **HTML**, XML no está enfocado en la presentación de datos, sino en su organización y descripción.
 
 
 
+### - Características principales de XML
 
+1. **Estructura jerárquica**: Los datos se organizan en una estructura de árbol con elementos anidados.
+2. **Extensible**: Permite definir etiquetas personalizadas según las necesidades del usuario.
+3. **Legible**: Es fácil de leer y entender tanto para humanos como para programas.
+4. **Independiente de la plataforma**: Puede ser utilizado en diferentes sistemas y aplicaciones.
+5. **Interoperabilidad**: Facilita el intercambio de datos entre sistemas heterogéneos.
 
+### - Ventajas de XML
+
+- **Portabilidad**: Es independiente de la plataforma y el software.
+- **Flexibilidad**: Permite definir etiquetas personalizadas.
+- **Intercambio de datos**: Es ideal para compartir información entre sistemas diferentes.
+- **Legibilidad**: Es fácil de entender para humanos y máquinas.
 
