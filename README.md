@@ -2,22 +2,50 @@
 
 # 1.MARKDOWN
 
-# Tipos de tamaño de encabezado
+Markdown es una forma simple y práctica de aplicar formato a textos sin necesidad de usar herramientas complejas. Su objetivo principal es facilitar la escritura y estructuración de contenido de manera clara y ordenada, permitiendo que cualquier persona pueda organizar información con facilidad utilizando una sintaxis muy intuitiva.
+
+## Tipos de tamaño de encabezado
+
+Según cuantos "#" añadamos antes del encabezado, tendremos diferentes niveles y tamaños. El rango esta entre 1 y 6.
+
+# Primer nivel encabezado
 ## Segundo nivel encabezado
 ### Tercer nivel encabezado
 #### Cuarto nivel encabezado
 ##### Quinto nivel encabezado
 ###### Sexto nivel encabezado
 
+```
+    # Primer nivel encabezado
+    ## Segundo nivel encabezado
+    ### Tercer nivel encabezado
+    #### Cuarto nivel encabezado
+    ##### Quinto nivel encabezado
+    ###### Sexto nivel encabezado
+
+``` 
+
 ## Como poner un texto en cursiva 
 
 De esta manera se puede poner texto en *Cursiva* o de esta _tambien_ (utilizamos "_" o "*" al principio y al final del texto que queramos destacar)
+
+```
+    _cursiva_
+```
 
 ## Como poner un texto en negrita
 
 Se puede hacer de **esta** manera o __esta__. (utilizamos "**" o "__" al principio y al final del texto que queramos destacar)
 
+```
+    **negrita**
+```
  - Las etiquetas de **_markdown_** y html pueden anidarse
+
+```
+    **_markdown_**
+```
+
 
 ## Como hacer una lista ordenada 
 
@@ -37,7 +65,7 @@ Se puede hacer de **esta** manera o __esta__. (utilizamos "**" o "__" al princip
 
 utilizamos ``` al principio y al final del codigo que queramos mostrar
 ``` html
-Codigo random
+
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
@@ -53,11 +81,17 @@ Codigo random
   <StagingSettings>
 
 ```
-## Como poner un link
+## Como poner un enlaces
+
+Para enlazar una página web con un texto de nuestro repositorio tenemos que seguir esta estructura.
 
 #### Estructura
 
+```
+
 [Titulo_del_link]+(link_a_la_pagina_web "Titulo opcional")
+
+```
 
 #### Ejemplo
 
@@ -70,7 +104,11 @@ Codigo random
 3. Entramos al repositorio desde git hub y accedemos a la imagen, donde copiaremos la barra de direcciones del navegador
 4. Aplicamos la siguiente Estructura
 
-[Textoalternativo]+(https://github.com/OscarRodriguez90/AprendizajeMarkdown/blob/main/descarga.jpg "Titulo opcional")
+```
+
+  [Pagina web]+(ubicación de la imagen + "Titulo opcional")
+
+```
 
 #### Ejemplo
 
@@ -78,28 +116,93 @@ Codigo random
 
 ## Como hacer una tabla 
 
+Para realizar tablas tenemos que seguir esta estructura:
+- La cantidad de "-" serà el espacio que queremos que ocupen cada columna de celdas
+- Para orientar el texto hacia la derecha o la izquierda ponemos ":" en el extremo respectivo del lado.
+- Si queremos que este centrado ponemos el caracter a ambos extremos de la columna
+
+```
+
 |Titulo 1 | Titulo 2 | Titulo 3 |
-|-----------|:-------------:|------------:|
+|:--------------|:----------------:|---------------:|
 |SMX2 |Curso 2324|25|
 |ASIX1|Curso2425|32|
 
-# 2.Como sincronizar en github
+```
 
-## Como clonar un repositorio
+|Titulo 1 | Titulo 2 | Titulo 3 |
+|:--------------|:----------------:|---------------:|
+|SMX2 |Curso 2324|25|
+|ASIX1|Curso2425|32|
 
-1. Primero, creamos un repositorio desde github
-2. Copiamos la url del repositorio
-3. Abrimos el cmd en la carpeta donde queremos clonarlo
-4. Usamos el comando "git clone _url del repositorio_"
+# 2.Github
 
-## Comandos basicos para sincronizar cambios en github
+# ¿Qué es GitHub?
 
- - __git init__ Situarse en el repositorio desde la terminal
- - __git branch__ Ver la rama en la que estas trabajando
- - __git add .__ Agrega los cambios que deseas confirmar
- - __git commit -m "nombre del comit"__ confirma los cambios y agrega un comentario orientativo
- - __git push origin__ Envía tus cambios al repositorio remoto
+**GitHub** es una plataforma basada en la web que permite alojar proyectos utilizando el sistema de control de versiones **Git**. Es ampliamente utilizada por desarrolladores y equipos para colaborar en el desarrollo de software de manera eficiente.
 
+## Objetivos de GitHub
+
+- Facilitar la **colaboración** entre desarrolladores.
+- Gestionar el **control de versiones** de los proyectos.
+- Permitir el **almacenamiento y organización** del código fuente.
+- Proveer herramientas para la **revisión de código** y seguimiento de cambios.
+- Fomentar el desarrollo de **proyectos de código abierto** y comunidades colaborativas.
+
+## Repositorios 
+
+Un repositorio como una caja fuerte para tu proyecto: guarda tu código, tus archivos, y cada paso que das. Puedes trabajar solo o compartirlo con otras personas. Además, puedes elegir si quieres que el mundo lo vea (público) o mantenerlo solo para ti o tu equipo (privado).
+
+### Terminal con Git
+
+Aquí tienes una lista desordenada pero útil de comandos básicos para moverte por Git sin parecer completamente perdido:
+
+-**git remote add origin URL**: Enlaza tu proyecto local con un repositorio remoto (por ejemplo, uno que ya creaste en GitHub).
+- **git push origin main**: Envía tus cambios al repositorio remoto. Es como decir "¡Listo, aquí va!" a GitHub.
+- **git commit -m tu mensaje**: Guarda un punto de control con tus cambios. Es como un mini check-in con una nota que dice qué hiciste.
+- **git add . o git add archivo.txt**: Marca archivos para ser guardados en el próximo commit. Puedes añadirlos todos o solo uno.
+- **git branch -m nueva_rama**: Cambia el nombre de la rama actual, por si la llamaste "prueba3finaldef" y luego te arrepentiste.
+- **git init**: Crea un repositorio en la carpeta actual. No hace magia, pero es el primer paso para empezar a usar Git.
+
+### Crear un repositorio
+
+1. Ve a [github.com](https://github.com)
+2. Inicia sesión con tu cuenta (o créala si no tienes)
+
+#### Paso 2: Crear Nuevo Repositorio
+1. Haz click en "+" en la esquina superior derecha
+2. Selecciona "New repository"
+
+#### Paso 3: Configurar Repositorio
+- **Repository name**: Nombre descriptivo (ej: "mi-proyecto")
+- **Description**: Descripción opcional
+- **Public/Private**: Elige si quieres que lo pueda ver todo el mundo o solo las personas con acceso.
+- **Initialize this repository with:**
+  - Add a README file (recomendado pero opcional)
+
+#### Paso 4: Crear Repositorio
+- Haz click en "Create repository"
+
+#### Cómo Clonar un Repositorio de GitHub
+
+Después de la creación, para poder trabajar localmente, tenemos que clonar el repositorio 
+
+1. **Crear/Copiar Repositorio**
+   - Si es nuevo: crear en GitHub
+   - Si existe: copiar su URL
+
+2. **Obtener URL del Repositorio**
+   - En GitHub, haz click en "Code" (botón verde)
+   - Copia la URL HTTPS (ej: `https://github.com/usuario/repositorio.git`)
+
+3. **Abrir Terminal**
+   - Navega a la carpeta destino con `cd ruta/de/la/carpeta`
+   - Ejemplo: `cd ~/Documents/Proyectos`
+
+4. **Comando Git Clone**
+   ```bash
+   git clone https://github.com/usuario/repositorio.git
+   ```
 # HTML 
 ## Apuntes HTML
 
