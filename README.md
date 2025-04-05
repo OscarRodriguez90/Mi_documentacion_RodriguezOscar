@@ -203,183 +203,144 @@ Después de la creación, para poder trabajar localmente, tenemos que clonar el 
    ```bash
    git clone https://github.com/usuario/repositorio.git
    ```
-# HTML 
-## Apuntes HTML
+ 
+# HTML
 
-## Historia HTML
+### Introduccion a HTML
 
-HTML o HyperText Markup Language significa: 
-- HyperText: Hipertexto, texto que enlaza con otros documentos.
-- Markup: Marcar o etiquetar, base del funcionamiento de la web.
-- Language: Lenguaje de las páginas web estandarizadas. No puede hacer bucles o condiciones.
-HTML es el lenguaje más común para describir la estructura y presentación de una página web. Las etiquetas de HTML tienen una estructura de apertura y cierre.
-
-## Introducción a elementos HTML
-
-Partes:
-
-- Etiqueta apertura: < p>
-- Etiqueta de cierre: < /p>
-- Contenido: lo que está dentro de las dos etiquetas
-- Elemento completo: la combinación de las 3 cosas
-
-## Introducción a Atributos HTML
-
-Contenido adicional que no quieres que se vea en el documento. Class - nombre del atributo.
-
-- Un espacio entre este y el nombre del elemento
-- Nombre del atr seguido de un =
-- Comillas de apertura y de cierre despues del =
-
-Elementos dentro de otros → anidamiento
-Elementos vacíos → no tienen etiqueta de cierre.
-
-## Estructura básica de un fichero HTML
-
-Tiene que tener una declaración DOCTYPE, un elemento < html> y un < head> < body> dentro. Head es para metadatos, hojas de estilo y scripts, el body es el contenido principal.
-
-< link> href=””
-
-- Sección < head >:
-- Juego de caracteres, metainformación 
-- Descripción de la pagina → aparecer en resultados de búsquedas
-- Palabras claves → keywords
-- Titulo de la pagina → < title></ title> es el título de tu página en la barra de búsquedas
-- Icono de la página de favicon
-- Enlace a otros ficheros→ hojas de estilo
-- Codigo CSS → dar estilo
-
-Head:
-
-Introducir datos, información extra 
-
-- width= device - width → ancho adaptable
-- link rel =”icon” → poner icono pestaña
-
-### Etiquetas SEO
-
-OPEN GRAPH: etiquetas que creo facebook
-- meta property = título …. imagen o ruta
-- si no se encuentra se carga la etiqueta principal
-
-Body: contenido que quieras mostrar, texto, imágenes, video, etc…
-
-- Elementos bloque: contienen otros elementos de bloque, texto o elementos de línea, títulos, listas o tablas
-- Elementos de línea: pequeños datos o texto. Hiperenlaces, imágenes citas… etc.
-
-## Resumen Normas básicas etiquetas HTML
-
-- Las etiquetas vienen en pares, apertura y cierre
-- Etiquetas vacías, no etiqueta cierre
-- Deben anidarse correctamente
-- Atributos de etiquetas de apertura nombre = “texto”
-- Recomendación: escribir todo en minuscula
-
-## Organización de los archivos
-
-- No tener archivos mezclados → caos
-
-- Debemos organizar nuestra aplicación en directorios
-
-- Crear directorio para los archivos, poner html y crear directorios para multimedia
-
-- Archivo de inicio → index.html → usuario no tiene que escribir el nombre 
-
-## Etiquetas básicas de HTML
-
-- Enlaces (< a >): saltar de un documento a otro, href → donde ponermos el enlace
-  - Enlaces a páginas externas
-  - < p>< a href link title = > jesuites </ a></ p>
-
-- Enlaces a páginas locales 
-  - usamos ruta relativa con href
-  - < a href= ruta/ruta
-
-- Encabezados (< h1> < h6>): para hacer encabezados
-  - Elementos de bloque
-
-- Párrafos → p: para hacer parrados
-  - elemento de bloque
-
-- Salto de linea: < br>
-
-- Separación linea: hr → poner linea horizontal
-
-- Énfasis em → dar énfasis strong → dar más énfasis
-
-- Contenedor en linea → < span>
-
-- Listas de definición: formado término y definición
-  - Definición lista < dl>
-  - Definición term < dt>
-  - Definition descripción < dd>
-
-- Imagenes
-  - < img> → no tiene cierre
-  - src: saber donde esta la imagen ubicada. “media/logo”.
-
-Dos tipos de rutas
-- Ruta absoluta → ubicación completa comenzando desde dominio
-  - Usar si imagen esta servidor externo
-  - www.web.com/ruta/ruta.png
-
-- Ruta relativa → ubicación desde el archivo actual
-  - Facilita mantenimiento del sitio
+**HTML** (HyperText Markup Language) es un lenguaje de marcas utilizado para diseñar y estructurar páginas web. Su propósito principal es definir la organización del contenido mediante etiquetas, permitiendo a los navegadores interpretar y mostrar texto, imágenes, videos y otros elementos interactivos. Introducido en 1991 por **Tim Berners-Lee**, HTML ha evolucionado significativamente, convirtiéndose en un estándar esencial para el desarrollo web moderno, compatible con tecnologías como **CSS** y **JavaScript** para crear experiencias dinámicas y visualmente atractivas.
 
 
-- Enlaces a etiquetas dentro del HTML:
-  - Puntos donde queremos ir → anclas. < h1 id=”seccion1”>... 
-  - Enlazar ancla: < a href= #seccion1> …
+### - Estructura de un archivo HTML
+Un documento **HTML** tiene una estructura básica que define cómo se organiza su contenido. Aquí tienes un ejemplo típico:
 
-## Elementos semánticos HTML 5
+```
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo HTML</title>
+</head>
+<body>
+    <!-- Aquí va el contenido -->
+</body>
+</html>
+```
 
-- Consigue describir el contenido dándole un significado de forma correcta
-- Ejemplos: < header>< footer>< article>< section>< nav>< figure> → proporcionan inf sobre tipo contenido
+**Descripción de las partes principales:**
+1. `<!DOCTYPE html>`: Declara que el documento utiliza **HTML5**.
+2. `<html>`: Es el contenedor principal de todo el contenido.
+3. `<head>`: Incluye metadatos como el título, enlaces a estilos y scripts.
+   - `<meta>`: Define información como el conjunto de caracteres.
+   - `<title>`: Especifica el título que aparece en la pestaña del navegador.
+4. `<body>`: Contiene el contenido visible de la página.
 
-## Formularios
+---
 
-- Interactuar con usuario y que nos transmita inf
-- Tipos de control: campos de texto, contraseña, botones de opción, para introducir archivos. 
-- Controles deben tener atributo name → identifica dato que se quiere enviar
+### - Etiquetas esenciales en HTML
+Las etiquetas son los bloques básicos de **HTML**. Aquí tienes una lista de las más comunes y su propósito:
 
-## Etiquetas de formulario
+- Para títulos y subtítulos, se usan etiquetas como `<h1>` hasta `<h6>`. `<h1>` es el más grande y `<h6>` el más pequeño.
+- Los párrafos se definen con `<p>`.
+- Para resaltar texto en **negrita**, se utiliza `<strong>`.
+- Para texto en *cursiva*, se emplea `<em>`.
+- Si necesitas subrayar algo, usa `<u>`.
+- Para insertar un salto de línea, utiliza `<br>`.
+- Para separar contenido con una línea horizontal, usa `<hr>`.
 
-- < Form > → crear formularios para que usuario envíe datos o haga acción en web
-  - Atributos:
-  - Action: url donde se enviaran los datos
-  - method: metodo de envio datos
-  - enctype: cómo se codifican datos antes de enviar al servidor, se usa cuando se suben archivos.
-  - target: donde se debe mostrar la respuesta al enviar el formulario:
-    - _self: la resp se carga en la misma ventana
-    - _blank: resp en una nueva pestaña o ventana
+---
 
-- < input> → crear tipos campos interactivos
-  - type: tipo de entrada que se debe mostrar
-  - id: identificador único del campo, asociar < label > a campo entrada
-  - name: nombre campo entrada, se utiliza para identificar dato
-  - value: valor predeterminado del campo de entrado o valor enviado servidor si campo no interactivo
-  - placeholder: texto que aparece cuando campo vacío
-  - required: indica campo a contemplar antes enviar formulario
-  - disabled: desactiva campo, para que  usuario no interactúe
-  - readonly: campo sea solo de lectura, para usuario no modificarlo
+### - Cómo trabajar con rutas en HTML
+Cuando necesitas referenciar recursos como imágenes o archivos, puedes usar dos tipos de rutas:
 
-- input type = radio → botón de opción (se agrupa con otros con mismo nombre)
-- input type = checkbox → casilla verificación (permitir selecciones múltiples)
+1. **Ruta Absoluta**: Especifica la ubicación completa del recurso, como un enlace externo.
+2. **Ruta Relativa**: Indica la ubicación del recurso en relación con el archivo actual.
 
-- button → crear botones interactivos en un formulario o web,
-  - diferencia input → el contenido de < button > puede incluir texto, imágenes o HTML adicional
-  - type: tipo de botón
-  - submit: para enviar el formulario, por defecto
-  - reset: restablece los campos a los valores iniciales. 
-  - name: nombre del botón que será enviado con datos del formulario si tiene type=submit
-  - value: especifica valor que se envía al servidor si el boton es submit
-  - disabled: desactiva el botón, impidiendo su uso
+Ejemplo práctico de una imagen con ruta relativa:
+```
+<img src="./imagenes/ejemplo.jpg" alt="Descripción de la imagen" width="300" height="200">
+```
+
+---
+
+### - Formularios en HTML
+Los formularios son una herramienta clave para interactuar con los usuarios. Se crean con la etiqueta `<form>` y pueden incluir campos de entrada, botones y más.
+
+Ejemplo de un formulario básico:
+```
+<form action="/submit" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+    <br>
+    <label for="email">Correo:</label>
+    <input type="email" id="email" name="email" placeholder="Escribe tu correo">
+    <br>
+    <button type="submit">Enviar</button>
+</form>
+```
+
+**Elementos importantes en un formulario:**
+- `<input>`: Define campos de entrada como texto, correo, contraseñas, etc.
+- `<label>`: Asocia un texto descriptivo a un campo de entrada.
+- `<button>`: Botón para enviar el formulario.
+
+---
+
+### - Elementos semánticos en HTML5
+Con **HTML5**, se introdujeron elementos semánticos que mejoran la organización del contenido. Algunos ejemplos son:
+
+- `<header>`: Define el encabezado de una página o sección.
+- `<footer>`: Representa el pie de página.
+- `<article>`: Contenido independiente, como un artículo o publicación.
+- `<section>`: Agrupa contenido relacionado.
+- `<nav>`: Contiene enlaces de navegación.
+- `<figure>`: Agrupa contenido gráfico, como imágenes o diagramas.
+
+---
+
+### - Validación de HTML
+Es importante asegurarse de que tu código **HTML** cumple con los estándares. Para ello, puedes usar herramientas como el **Validador HTML** del **W3C**, que analiza tu documento y te informa de errores o advertencias.
+
+Accede al validador aquí: [Validador HTML](https://validator.w3.org/)
+
+--- 
+
+### - Listas y contenido estructurado
+En **HTML**, puedes organizar contenido en listas. Aquí tienes cómo hacerlo:
+
+1. **Listas ordenadas**: Se crean con `<ol>` y cada elemento se define con `<li>`.
+   ```
+   <ol>
+       <li>Primer elemento</li>
+       <li>Segundo elemento</li>
+   </ol>
+   ```
+
+2. **Listas desordenadas**: Se crean con `<ul>` y también usan `<li>` para los elementos.
+   ```
+   <ul>
+       <li>Elemento A</li>
+       <li>Elemento B</li>
+   </ul>
+   ```
+
+---
+
+### - Hipervínculos e imágenes
+Para enlazar páginas o recursos, se usa la etiqueta `<a>`:
+```
+<a href="https://www.ejemplo.com">Visita Ejemplo</a>
+```
+
+Para insertar imágenes, se utiliza `<img>`:
+```
+<img src="imagen.jpg" alt="Descripción de la imagen">
+```
 
 
 
 
-
-	
 
 
 
